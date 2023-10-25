@@ -16,5 +16,25 @@ class ColdForm(forms.Form):
                                      widget=forms.Select(attrs={'class': 'form-select'}))
     breath = forms.TypedChoiceField(coerce=lambda x: x == 'True',
                                     choices=((False, 'خیر'), (True, 'بله')),
-                                    label='آیا کودک شما در بلع مشکل شدید دارد',
+                                    label='آیا کودک شما در تنفس مشکل دارد',
+                                    widget=forms.Select(attrs={'class': 'form-select'}))
+    swallow = forms.TypedChoiceField(coerce=lambda x: x == 'True',
+                                     choices=((False, 'خیر'), (True, 'بله')),
+                                     label='آیا کودک شما در بلع مشکل شدید دارد',
+                                     widget=forms.Select(attrs={'class': 'form-select'}))
+    fever_3_days = forms.TypedChoiceField(coerce=lambda x: x == 'True',
+                                          choices=((False, 'خیر'), (True, 'بله')),
+                                          label='آیا تب بیش از ۳۷/۵ درجه سانتی گراد دهانی یا ۳۸ درجه سانتی گراد مقعدی بیش از ۳ روز وجود دارد',
+                                          widget=forms.Select(attrs={'class': 'form-select'}))
+    liquids = forms.TypedChoiceField(coerce=lambda x: x == 'True',
+                                     choices=((False, 'خیر'), (True, 'بله')),
+                                     label='آیا کودک به خوبی مایعات نمی نوشد',
+                                     widget=forms.Select(attrs={'class': 'form-select'}))
+    discharge = forms.TypedChoiceField(coerce=lambda x: x == 'True',
+                                       choices=((False, 'خیر'), (True, 'بله')),
+                                       label='آیا ترشح بینی پیوسته سبز رنگ است',
+                                       widget=forms.Select(attrs={'class': 'form-select'}))
+    sputum = forms.TypedChoiceField(coerce=lambda x: x == 'True',
+                                    choices=((False, 'خیر'), (True, 'بله')),
+                                    label='آیا کودک خلط سبز رنگ دارد',
                                     widget=forms.Select(attrs={'class': 'form-select'}))
